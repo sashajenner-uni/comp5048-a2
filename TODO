@@ -1,0 +1,53 @@
+Context
+This assessment will examine the student’s understanding of visualization theories and the ability to apply their knowledge into practice in order to utilize visualisation to extract intelligence to support business processes.
+
+Topic: How did the mobile device market change?
+Background:
+There are many mobile devices have been developed in the past decades.  Some companies tried to introduce ground-breaking new mobile devices into the market, and some succeeded and some did not.  Furthermore, not the same company always lead the market, nor does one device dominates the market for so long.  Even if one company/device leads the market, many companies and other devices will eventually catch up and may take over.  This assignment will ask you to demonstrate how you can answer questions on how the mobile device market has changed over the last few decades using interactive visualisation (visualisations).
+
+Data:
+In this assignment, a data set containing many mobile devices introduced into the market and their features such as:
+
+Model name and ID
+Release Date, Year, (ranging from 1989 to 2013)
+RAM (memory) capacity (Megabyte),
+Storage capacity (Megabyte),
+CPU clock (MHz)
+Display size, (dimensions) (diagonal in inch, width and length in pixels)
+Volume (width-length-depth in mm)
+Mass, (grams)
+Pixel Density (per inch)
+Company ID
+are provided for Visual Analyses.   It should be noted that there is no sale-related data. You can download this data from here (Links to an external site.). (Assignment 2, Mobile Device Data for Assignment 2)
+
+Tasks:
+This assignment consists of two assessment components 1) group tasks (40% of the final mark), and 2)  individual tasks (20% of the final mark).
+
+Group tasks: (max 8 pages) (40 points)
+Each group needs to produce the following as a part of the group task:
+
+The main purpose of this group Visual Analytic task is to find :
+What types of mobile devices have been introduced between 1989 and 2013? Can you visually find common characteristics/features to define types of mobile devices?
+What sorts of “trends” can you observe regarding some types of mobile devices becoming obsolete and being taken over by different/new types?
+If you were to predict or anticipate a newly emerging mobile device type, what sort of evidence(s) you can visually show to easily detect such emergence? For instance, if you only had access to the data between 1989 and 2010, how would you anticipate new types which became dominant during 2011 and 2013 without seeing the data corresponding to 2011 – 2013? 
+ 
+
+To find the answers to the above three questions, you need to produce:
+Interactive Visualization (or multiple visualizations) allows you to “see” the pieces of information that lead to the answers to the above three questions 1-A/B/C.
+Explain how your interactive visualisation has been evaluated and what sort of changes/modifications were applied to derive your final interactive visualisation.
+For each Visualization, provide the group’s justification on how the visualization is produced, such as
+Why certain axes arrangement(s) was(were) used and how they would help to see the information you would need to see,
+Why certain visual variables were used and how they would help to see the information you would need to see,
+Why certain interaction was used and how that would assist analytic processes.
+ 
+
+NOTE: you can use tools of your choice such as Tableau, PowerBI or even your own visualization program using a library like Matplotlib (python),  and D3j (javascript).
+
+ 
+
+Submission:
+Write your report (up to 8 pages) using the IEEE conference template. We use this format and set the maximum page number in order to make the amount of work presented and processed by the markers consistent across all students.
+
+Use this Canvas site to submit your report in the form of a PDF file, so that it can be checked using Turnitin.
+
+You can also add ONE movie file (.mov, or .mp4) to demonstrate your visualization/interactive visualization.  The movie file should NOT exceed 3 min. 
