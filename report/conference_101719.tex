@@ -20,7 +20,7 @@
 \IEEEauthorblockA{}
 \and
 \IEEEauthorblockN{Minerva Predavec}
-\IEEEauthorblockA{}
+\IEEEauthorblockA{490398308}
 \and
 \IEEEauthorblockN{Xingyu Wei}
 \IEEEauthorblockA{}
@@ -41,30 +41,76 @@
 \section{Mobile Device Types}
 %What types of mobile devices have been introduced between 1989 and 2013? Can you visually find common characteristics/features to define types of mobile devices?
 
+We identified six different types - Smartphones, Dumbphones, PDAs, Palmtops, Laptops and Tablets
+
+Firstly, when plotting width vs height, there's two clear clusters on either side of the 1:1 line. Investigation of what these objects were revealed that the flatter ones were Palmtops, Laptops and Tablets, and the taller ones were phones and PDAs.
+
+There are two distinct classes of phones, those with a screen that takes up most of their size, and those that have smaller screens to allow for keypads. These are respectively termed smartphones and dumbphones. However, a lot of the phones that were classified as smartphones actually turned out to be PDAs. Since true smartphones weren't introduced until 2007, this was picked as a dividing point, even though the transition was not sharp.
+
+The distinction between palmtops and laptops can be determined by the width - below a certain size, they are called palmtops due to the fact they can fit in a palm. Tablets are classified in the same was as laptops, except they are divided by date in a similar manner to PDAs.
+
 \subsection{Visualisation}
 %Interactive Visualization (or multiple visualizations) allows you to “see” the pieces of information that lead to the answers to the above three questions 1-A/B/C.
 
+Insert the single visulisations with the colours - both for the width and height, and the aspect ratios
+Explain what they mean
+
 \subsection{Design Evaluation}
 %Explain how your interactive visualisation has been evaluated and what sort of changes/modifications were applied to derive your final interactive visualisation.
+
+Exploratory data analysis of comparing different aspects against each other was used to find these initial types
+Once the types were discovered, colours were added, and the two visualisations that mostly clearly illustrated the characteristics that defined them were created
 
 \subsection{Justifications}
 %Why certain axes arrangement(s) was(were) used and how they would help to see the information you would need to see,
 %Why certain visual variables were used and how they would help to see the information you would need to see,
 %Why certain interaction was used and how that would assist analytic processes.
+
+For the initial comparison of the height and width, choosing the height as the vertical axis, and the width as the horizontal axis made the most sense. This is because it accorded with people's intuitive understanding of height and width - allowing them to imagine each dot as defining the diagonal extension of the device.
+
+For the arrangement of the device vs display aspect ratios, the choice of which was horizontal and which was vertical was more arbitrary. The display aspect ratio was selected as the horizontal axis, since that dataset had a larger range. 
+
+FOr both, colours were used to illustate the differences between devices. Colours were selected to be similar - reds for phones, blues for palm/laptops, green for PDAs, and purple for tablets
+
+On one or both of the visualisations, for each type, there is a clear cluster that illustrates the difference between the types. The only exception is the smartphone/PDA cluster, as outlined above.
+
+No interaction for this lot, but not necessary, since this illustrates the difference
 
 \section{Historical Trends}
 %What sorts of “trends” can you observe regarding some types of mobile devices becoming obsolete and being taken over by different/new types?
 
+There is a clear trend of PDAs and laptops at the mark of 1997. At around 2004, there's a clear growthn in the number of palmtop computers. This lasts until about 2010, after which almost no new palmtops are released, replaced by the growing market in laptops that started around 2009.
+
+Finally, the phone and PDA market slowly grows, with dumbphones remaining popular throughout most of the early 2000s. However, PDAs formed a large market share, only being replaced by the advent of smartphones (though as previously mentioned the distinction between those two is taken to be by date)
+
 \subsection{Visualisation}
 %Interactive Visualization (or multiple visualizations) allows you to “see” the pieces of information that lead to the answers to the above three questions 1-A/B/C.
 
+Show the time segment plots - width/height and aspect ratios
+
+Show the combined market share plot
+
 \subsection{Design Evaluation}
 %Explain how your interactive visualisation has been evaluated and what sort of changes/modifications were applied to derive your final interactive visualisation.
+
+The time segment plots were both based on their single predecessors. However, they were expanded to show the progression through time
+
+The market share plot was created to give a more absolute understanding of the numerical shift in market share trends
+The market share plot was initially baseed on the absolute numbers, but was very difficult to interpret before 2005 due to the increase in the mobile market over the 2000s. It was shifted to relative to make the market share more obvious, and the absolute one was attached below to provide more information for comparison
 
 \subsection{Justifications}
 %Why certain axes arrangement(s) was(were) used and how they would help to see the information you would need to see,
 %Why certain visual variables were used and how they would help to see the information you would need to see,
 %Why certain interaction was used and how that would assist analytic processes.
+
+The time segment plots were both based on their single predecessors, with the same information and axes arrangements. However, they were expanded to show the progression through time
+They were split into 20 different subplots to allow for the progression through time to be visualised. These were arranged left-to-right, top-to-bottom for ease of understanding. 
+This allowed for the evolution of the clusters to be observed through time, and make it obvious when a cluster was superseded or shifted in the market
+This also could be animated, but it makes it more difficult to compare across longer spans of time
+
+The market share plot was arranged with the proportion of market share vertically, and the release year horizontally - since the horizontal axis should be the one assigned to the evolution through time. An area plot was selected instead of a line plot as recommended in the lectures, since it is filled and showing a proportion of the market share
+The colours were matched with those selected in earlier plots, to ensure visual continuity and ease of understanding
+The two plots were stacked together, allowing for easy comparison of the absolute and proportional times for each year
 
 \section{Future Predictions}
 %If you were to predict or anticipate a newly emerging mobile device type, what sort of evidence(s) you can visually show to easily detect such emergence? For instance, if you only had access to the data between 1989 and 2010, how would you anticipate new types which became dominant during 2011 and 2013 without seeing the data corresponding to 2011 – 2013?
