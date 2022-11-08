@@ -7,6 +7,7 @@
 \usepackage{graphicx}
 \usepackage{textcomp}
 \usepackage{xcolor}
+\usepackage{hyperref}
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
@@ -52,10 +53,10 @@ and 2013:
 	\item tablets.
 \end{enumerate}
 
-Let the aspect ratio $r$ be the ratio of length to width given by
-\[ r = \frac{\text{length}}{\text{width}}. \]
+Let the aspect ratio $r$ be the ratio of height to width given by
+\[ r = \frac{\text{height}}{\text{width}}. \]
 
-The implications of this is that portrait mobile devices such as phones will
+The implications of this are portrait mobile devices such as phones will
 have $r>1$ and landscape mobile devices such as laptops will have $0<r<1$.
 %This will become a useful metric for differentiating between mobile device types.
 
@@ -67,35 +68,38 @@ hardware. These are typically portrait hand-held devices with $r>1$.
 
 PDAs were mobile devices which functioned as personal information managers. They
 were usually portrait devices with touch screen and internet functionality.
-However, since the advent of the smartphone these devices have been mostly
+However, since the advent of the smartphone these devices have mostly been
 displaced.
 
 Palmtops, laptops and tablets are all landscape mobile devices with $0<r<1$.
 Palmtops are miniature laptops which fit into ones palm or pocket. Historically,
-palmtops were commercially popular during the late 1990s to early 2000s.
-% TODO add a reference here
+palmtops were commercially popular during the late 1990s to early 2000s
+\cite{palm}.
 Tablets on the other hand are relatively large smartphones which were
-popularised by the 2010 release of the first Apple iPad.
-% TODO add a reference here
+popularised by the 2010 release of the first Apple iPad \cite{ipad}.
+
+We will now investigate the defining characteristics of these mobile
+devices types as is observed in the data.
+
 \subsection{Visualisation} \label{sec:Avisu}
 %Interactive Visualization (or multiple visualizations) allows you to “see” the pieces of information that lead to the answers to the above three questions 1-A/B/C.
 
-Firstly, when plotting width vs height, there's two clear clusters on either side of the 1:1 line. Investigation of what these objects were revealed that the flatter ones were Palmtops, Laptops and Tablets, and the taller ones were phones and PDAs.
+Firstly, when plotting height against width, there's two clear clusters on either side of the 1:1 line. Investigation of what these objects were revealed that the flatter ones were Palmtops, Laptops and Tablets, and the taller ones were phones and PDAs.
 
 There are two distinct classes of phones, those with a screen that takes up most of their size, and those that have smaller screens to allow for keypads. These are respectively termed smartphones and dumbphones. However, a lot of the phones that were classified as smartphones actually turned out to be PDAs. Since true smartphones weren't introduced until 2007, this was picked as a dividing point, even though the transition was not sharp.
 
-The distinction between palmtops and laptops can be determined by the width - below a certain size, they are called palmtops due to the fact they can fit in a palm. Tablets are classified in the same was as laptops, except they are divided by date in a similar manner to PDAs.
+The distinction between palmtops and laptops can be determined by the width - below a certain size, they are called palmtops due to the fact they can fit in a palm. Tablets are classified in the same way as laptops, except they are divided by date in a similar manner to PDAs.
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.5\textwidth]{Visualisations/A/HeightvsWidthColour.png}
+    \includegraphics[width=0.5\textwidth]{../Visualisations/A/HeightvsWidthColour.png}
     \caption{}
     \label{fig:HeightvsWidth}
 \end{figure}
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.5\textwidth]{Visualisations/A/DevicevsDisplayColour.png}
+    \includegraphics[width=0.5\textwidth]{../Visualisations/A/DevicevsDisplayColour.png}
     \caption{}
     \label{fig:DevicevsDisplay}
 \end{figure}
@@ -108,7 +112,7 @@ Figure \ref{fig:HeightvsWidth} plots device width against device height. Figure 
 %Explain how your interactive visualisation has been evaluated and what sort of changes/modifications were applied to derive your final interactive visualisation.
 
 Exploratory data analysis of comparing different aspects against each other was used to find these initial types.
-Once the types were discovered, colours were added, and the two visualisations that mostly clearly illustrated the characteristics that defined them were created. It was found that the best axis assignments to separate the mobile devices into their respective types was height vs width as well as device vs display aspect ratios. This makes sense as oftentimes we define these device types by their sizes, an example being comparing a tablet to a smartphone, whereby the tablet is clearly larger in both dimensions. 
+Once the types were discovered, colours were added, and the two visualisations that mostly clearly illustrated the characteristics that defined them were created. It was found that the best axis assignments to separate the mobile devices into their respective types was height vs width as well as device vs display aspect ratios. This makes sense as often times we define these device types by their sizes, an example being comparing a tablet to a smartphone, whereby the tablet is clearly larger in both dimensions. 
 
 \subsection{Justifications}
 %Why certain axes arrangement(s) was(were) used and how they would help to see the information you would need to see,
@@ -137,19 +141,19 @@ Finally, the phone and PDA market slowly grows, with dumbphones remaining popula
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.5\textwidth]{Visualisations/B/DimensionsYear.png}
+    \includegraphics[width=0.5\textwidth]{../Visualisations/B/DimensionsYear.png}
     \caption{}
     \label{fig:DimensionsYear}
 \end{figure}
 \begin{figure}
     \centering
-    \includegraphics[width=0.5\textwidth]{Visualisations/B/AspectRatioYear.png}
+    \includegraphics[width=0.5\textwidth]{../Visualisations/B/AspectRatioYear.png}
     \caption{}
     \label{fig:AspectRatioYear}
 \end{figure}
 \begin{figure}
     \centering
-    \includegraphics[width=0.5\textwidth]{Visualisations/B/MarketShareYear.png}
+    \includegraphics[width=0.5\textwidth]{../Visualisations/B/MarketShareYear.png}
     \caption{}
     \label{fig:MarketShareYear}
 \end{figure}
@@ -185,59 +189,51 @@ The two plots were stacked together, allowing for easy comparison of the absolut
 %If you were to predict or anticipate a newly emerging mobile device type, what sort of evidence(s) you can visually show to easily detect such emergence? For instance, if you only had access to the data between 1989 and 2010, how would you anticipate new types which became dominant during 2011 and 2013 without seeing the data corresponding to 2011 – 2013?
 Question C asks us to find evidence that could predict or anticipate an emerging category of mobile devices. Two methods were used by us to answer this question, one was to predict possible future emerging mobile device categories by directly observing the market share graphs for each type of mobile device. The other was to identify additional metrics to predict possible emerging mobile device categories in the future by observing changes in the metrics. Here we are going to describe how we use these two methods to make predictions by giving examples.
 
-For example, assuming we only have data from 1989 to 2010, Our goal is to predict the new type of mobile devices that became dominant from 2011 to 2013. We tried to use the first method at first. As we can see from figure 6, smartphones started to appear in 2007 and have grown rapidly in market share every year since then. Tablets started to appear in 2009, but only occupy a small market share. PDAs, on the other hand, have seen a steady decline in market share. It is therefore reasonable to assume that after 2010, smartphones will continue to grow steadily and replace PDAs as the dominant type of mobile device.
+For example, assuming we only have data from 1989 to 2010, Our goal is to predict the new type of mobile devices that became dominant from 2011 to 2013. We tried to use the first method at first. As we can see from Figure \ref{fig:market-2010}, smartphones started to appear in 2007 and have grown rapidly in market share every year since then. Tablets started to appear in 2009, but only occupy a small market share. PDAs, on the other hand, have seen a steady decline in market share. It is therefore reasonable to assume that after 2010, smartphones will continue to grow steadily and replace PDAs as the dominant type of mobile device.
 
-Now we try to use the second method at this time. We use one metric to make predictions. Let the pixel density/depth $r$ be the metric given by
-\[ r = \frac{\text{pixel density}}{\text{depth}}. \]
+Now we try to use the second method at this time. We use one metric to make predictions. Let the metric $m$ given by
+\[ m = \frac{\text{pixel density}}{\text{depth}}. \]
 
-The reason for choosing this metric is that smartphones generally have a higher pixel density than other categories of mobile devices, while their depth is generally less than other categories of mobile devices. Therefore, the pixel density/depth metric is able to differentiate smartphones from other categories of mobile devices.
+The reason for choosing this metric is that smartphones generally have a higher pixel density than other categories of mobile devices, while their depth is generally less than other categories of mobile devices. Therefore, the metric is able to differentiate smartphones from other categories of mobile devices.
 
-By looking at the line graph in Figure 7, it can be seen that from 2008-2010, the average Pixel density/depth is increasing linearly, which means that the pixels of mobile devices are increasing and their thickness is decreasing during the decade, thus we can deduce that the reason for this result is the mass production of cell phones, especially in 2006-2010, when the slope is increasing significantly and gradually. Thus, we can predict that the proportion of cell phones in the market share will increase significantly in the next 3 years. Comparing the market share graphs, we can see that cell phones did dominate the market share from 2008 to 2013, thus confirming our prediction.
+By looking at the line graph in Figure \ref{fig:pixel}, it can be seen that from 2008-2010, the average pixel density/depth is increasing linearly, which means that the pixels of mobile devices are increasing and their thickness is decreasing during the decade, thus we can deduce that the reason for this result is the mass production of cell phones, especially in 2006-2010, when the slope is increasing significantly and gradually. Thus, we can predict that the proportion of cell phones in the market share will increase significantly in the next 3 years. Comparing the market share graphs, we can see that cell phones did dominate the market share from 2008 to 2013, thus confirming our prediction.
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.5\textwidth]{Visualisations/C/Market share 2010.png}
+    \includegraphics[width=0.5\textwidth]{../Visualisations/C/Market share 2010.png}
     \caption{}
-    \label{}
+    \label{fig:market-2010}
 \end{figure}
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.5\textwidth]{Visualisations/C/Piexel density.png}
+    \includegraphics[width=0.5\textwidth]{../Visualisations/C/Piexel density.png}
     \caption{}
-    \label{}
+    \label{fig:pixel}
 \end{figure}
 
 %Interactive Visualization (or multiple visualizations) allows you to “see” the pieces of information that lead to the answers to the above three questions 1-A/B/C.
 
 \subsection{Visualisation}
-Figure 6 is an area chart that each device plotted by its percentage market share over the years from 1989 to 2010, which is the time interval we can currently observe. Each device has been assigned a unique color. From the color area, it can be seen that it is the market share of mobile devices in different years. Thus, the share of mobile devices in different categories for each year and how the share of different mobile devices has changed over time can be easily visualized.
+Figure \ref{fig:market-2010} is an area chart that each device plotted by its percentage market share over the years from 1989 to 2010, which is the time interval we can currently observe. Each device has been assigned a unique color. From the color area, it can be seen that it is the market share of mobile devices in different years. Thus, the share of mobile devices in different categories for each year and how the share of different mobile devices has changed over time can be easily visualized.
 
-Figure 7 is a composite plot consisting of two subplots. One is an area chart of the market share of different types of mobile devices across years just like figure 6, the other one is a line graph that shows a linear trend of the average pixel density/ width ratio of devices versus the year of mobile device release. The line graph could show the relationship more clearly, enhance the visualization, and help us to make further predictions.
+Figure \ref{fig:pixel} is a composite plot consisting of two subplots. One is an area chart of the market share of different types of mobile devices across years just like Figure \ref{fig:market-2010}, the other one is a line graph that shows a linear trend of the average pixel density/ width ratio of devices versus the year of mobile device release. The line graph could show the relationship more clearly, enhance the visualization, and help us to make further predictions.
 
 \subsection{Design Evaluation}
 %Explain how your interactive visualisation has been evaluated and what sort of changes/modifications were applied to derive your final interactive visualisation.
-The market share plot in figure 6 was created here to observe the evolution of the share of different categories of mobile devices and thus to extrapolate the conclusions we wanted to draw that which is the possible emerging type of mobile devices in the future.
+The market share plot in Figure \ref{fig:market-2010} was created here to observe the evolution of the share of different categories of mobile devices and thus to extrapolate the conclusions we wanted to draw that which is the possible emerging type of mobile devices in the future.
 
-For figure 7, the market share plot was used to show the actual market share situation and could be compared with our prediction results to verify whether our guess is correct. The line graph is used to show the trend of the average Pixel density/depth to predict the future market share change.
+For Figure \ref{fig:pixel}, the market share plot was used to show the actual market share situation and could be compared with our prediction results to verify whether our guess is correct. The line graph is used to show the trend of the average Pixel density/depth to predict the future market share change.
 
 \subsection{Justifications}
 %Why certain axes arrangement(s) was(were) used and how they would help to see the information you would need to see,
 %Why certain visual variables were used and how they would help to see the information you would need to see,
 %Why certain interaction was used and how that would assist analytic processes.
-Figure 6 shows a chart of the proportional market share of the different categories of mobile devices. This visual chart arranges the proportion of market share vertically and the year of release horizontally, as the horizontal axis is supposed to be assigned to an evolving axis. And as before, we used an area plot rather than a line plot. This is because the area plot is filled and it could show a proportion of the market share of mobile devices in different categories and how they are changing more clearly. 
+Figure \ref{fig:market-2010} shows a chart of the proportional market share of the different categories of mobile devices. This visual chart arranges the proportion of market share vertically and the year of release horizontally, as the horizontal axis is supposed to be assigned to an evolving axis. And as before, we used an area plot rather than a line plot. This is because the area plot is filled and it could show a proportion of the market share of mobile devices in different categories and how they are changing more clearly. 
 
-For figure 7, the market share plot is arranged vertically in proportion to the market share and horizontally in the year of release of the mobile device. This is because the horizontal axis should be assigned to the axis that evolves over time. And we also chose an area chart here. To ensure visual coherence and ease of understanding, the colors match those of the previously drawn graphs. The Line graph is used to show the change of data over a continuous time interval or time span and is characterized by reflecting the trend of things changing over time or in ordered categories. The line graph clearly shows whether the data is increasing or decreasing, the rate of increase or decrease, the pattern of increase or decrease, and the peak characteristics. We use it to analyze the trend of data change over time, we use the horizontal axis in the line graph to represent the time span and the same time interval, and the vertical axis to represent the data values at different time moments.
+For Figure \ref{fig:pixel}, the market share plot is arranged vertically in proportion to the market share and horizontally in the year of release of the mobile device. This is because the horizontal axis should be assigned to the axis that evolves over time. And we also chose an area chart here. To ensure visual coherence and ease of understanding, the colors match those of the previously drawn graphs. The Line graph is used to show the change of data over a continuous time interval or time span and is characterized by reflecting the trend of things changing over time or in ordered categories. The line graph clearly shows whether the data is increasing or decreasing, the rate of increase or decrease, the pattern of increase or decrease, and the peak characteristics. We use it to analyze the trend of data change over time, we use the horizontal axis in the line graph to represent the time span and the same time interval, and the vertical axis to represent the data values at different time moments.
 
-
-\begin{thebibliography}{00}
-\bibitem{b1} G. Eason, B. Noble, and I. N. Sneddon, ``On certain integrals of Lipschitz-Hankel type involving products of Bessel functions,'' Phil. Trans. Roy. Soc. London, vol. A247, pp. 529--551, April 1955.
-\bibitem{b2} J. Clerk Maxwell, A Treatise on Electricity and Magnetism, 3rd ed., vol. 2. Oxford: Clarendon, 1892, pp.68--73.
-\bibitem{b3} I. S. Jacobs and C. P. Bean, ``Fine particles, thin films and exchange anisotropy,'' in Magnetism, vol. III, G. T. Rado and H. Suhl, Eds. New York: Academic, 1963, pp. 271--350.
-\bibitem{b4} K. Elissa, ``Title of paper if known,'' unpublished.
-\bibitem{b5} R. Nicole, ``Title of paper with only first word capitalized,'' J. Name Stand. Abbrev., in press.
-\bibitem{b6} Y. Yorozu, M. Hirano, K. Oka, and Y. Tagawa, ``Electron spectroscopy studies on magneto-optical media and plastic substrate interface,'' IEEE Transl. J. Magn. Japan, vol. 2, pp. 740--741, August 1987 [Digests 9th Annual Conf. Magnetics Japan, p. 301, 1982].
-\bibitem{b7} M. Young, The Technical Writer's Handbook. Mill Valley, CA: University Science, 1989.
-\end{thebibliography}
+\bibliography{bib}
+\bibliographystyle{unsrt}
 
 \end{document}
