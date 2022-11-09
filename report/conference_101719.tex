@@ -32,8 +32,8 @@
 
 \maketitle
 
-\begin{abstract}
-\end{abstract}
+%\begin{abstract}
+%\end{abstract}
 
 %\begin{IEEEkeywords}
 %component, formatting, style, styling, insert
@@ -49,15 +49,15 @@ and 2013:
 	\item dumbphones,
 	\item personal digital assistants (PDAs),
 	\item palmtops,
-	\item laptops and
+	\item satnavs and
 	\item tablets.
 \end{enumerate}
 
-Let the aspect ratio $r$ be the ratio of height to width given by
-\[ r = \frac{\text{height}}{\text{width}}. \]
+Let the aspect ratio $r$ be the ratio of length to width given by
+\[ r = \frac{\text{length}}{\text{width}}. \]
 
 The implications of this are portrait mobile devices such as phones will
-have $r>1$ and landscape mobile devices such as laptops will have $0<r<1$.
+have $r>1$ and landscape mobile devices such as palmtops will have $0<r<1$.
 %This will become a useful metric for differentiating between mobile device types.
 
 Smartphones and dumbphones are both mobile telephones but are differentiated by
@@ -71,12 +71,14 @@ were usually portrait devices with touch screen and internet functionality.
 However, since the advent of the smartphone these devices have mostly been
 displaced.
 
-Palmtops, laptops and tablets are all landscape mobile devices with $0<r<1$.
+Palmtops, tablets and satnavs are (usually) all landscape mobile devices with $0<r<1$.
 Palmtops are miniature laptops which fit into ones palm or pocket. Historically,
 palmtops were commercially popular during the late 1990s to early 2000s
 \cite{palm}.
 Tablets on the other hand are relatively large smartphones which were
 popularised by the 2010 release of the first Apple iPad \cite{ipad}.
+Satnavs, or satellite navigation devices, help users to navigate by pinpointing
+their location using global navigation satellite systems (GNSS).
 
 We will now investigate the defining characteristics of these mobile
 devices types as is observed in the data.
@@ -84,50 +86,144 @@ devices types as is observed in the data.
 \subsection{Visualisation} \label{sec:Avisu}
 %Interactive Visualization (or multiple visualizations) allows you to “see” the pieces of information that lead to the answers to the above three questions 1-A/B/C.
 
-Firstly, when plotting height against width, there's two clear clusters on either side of the 1:1 line. Investigation of what these objects were revealed that the flatter ones were Palmtops, Laptops and Tablets, and the taller ones were phones and PDAs.
-
-There are two distinct classes of phones, those with a screen that takes up most of their size, and those that have smaller screens to allow for keypads. These are respectively termed smartphones and dumbphones. However, a lot of the phones that were classified as smartphones actually turned out to be PDAs. Since true smartphones weren't introduced until 2007, this was picked as a dividing point, even though the transition was not sharp.
-
-The distinction between palmtops and laptops can be determined by the width - below a certain size, they are called palmtops due to the fact they can fit in a palm. Tablets are classified in the same way as laptops, except they are divided by date in a similar manner to PDAs.
+A screenshot of an interactive scatter plot of length against width for all
+mobile devices in the data, coloured by release year, is shown in Figure
+\ref{fig:length-width-cyear-shot}. The diagonal divides the plot into two
+classes; the portrait devices above the diagonal and the landscape devices
+below the diagonal.
+Through interaction, the portrait devices were understood
+to be phones or PDAs and the landscape devices; palmtops, satnavs or tablets.
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.5\textwidth]{../Visualisations/A/HeightvsWidthColour.png}
-    \caption{}
+    \includegraphics[width=0.5\textwidth]{../Visualisations/A/length-width-cyear-shot.png}
+	\caption{\label{fig:length-width-cyear-shot}A screenshot of an
+	interactive scatter plot displaying length against width for all the
+	mobile devices in the data, coloured by their release year. The diagonal
+	represents all square mobile devices with $r=1$. Those mobile devices
+	above the diagonal are portrait devices with $r>1$, and those below the
+	diagonal are landscape devices with $0<r<1$. Note that the axes do not
+	have units since they have been normalised.}
+\end{figure}
+
+To understand the class of portrait devices, Figure \ref{fig:ddiag-diag-ccpu-shot}
+was created, which plots the display diagonal against the diagonal of all
+devices with $r>1$, coloured by CPU clock speed.
+%It was discovered that display diagonal is proportional to CPU clock speed
+%which makes sense.
+Mobile devices in the top left area are fast with large displays
+which contribute to most of their size. Whilst those in the bottom right area
+have smaller displays, many functional buttons such as a keypad and less CPU
+power. The bottom left area usually accounted for flip phones. Naturally, this
+allowed us to differentiate the portrait mobile devices into smartphones,
+dumbphones and PDAs.
+
+%There are two distinct classes of phones, those with a screen that takes up most of their size, and those that have smaller screens to allow for keypads. These are respectively termed smartphones and dumbphones. However, a lot of the phones that were classified as smartphones actually turned out to be PDAs. Since true smartphones weren't introduced until 2007, this was picked as a dividing point, even though the transition was not sharp.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{../Visualisations/A/ddiag-diag-ccpu-shot.png}
+	\caption{\label{fig:ddiag-diag-ccpu-shot}A screenshot of an interactive
+	scatter plot showing display diagonal against diagonal
+	for all the portrait devices in the data (with $r>1$), coloured by their
+	CPU clock speed (normalised). Both diagonals are calculated by using
+	Pythagoras' formula given the normalised overall and display length and
+	width.}
+\end{figure}
+
+Now we will investigate the class of landscape devices. Consider again Figure
+\ref{fig:length-width-cyear-shot} and the region below the $r=1$ diagonal. It
+was found, through hovering over the model description of each point, that
+devices with a width less than 0.4 in the green cluster mostly consist of
+satnavs. Devices with a width greater than 0.4 and released before 2001
+(coloured purple to blue) were found to be palmtops and the remainder
+(coloured green to yellow) as tablets.
+
+%The distinction between palmtops and laptops can be determined by the width - below a certain size, they are called palmtops due to the fact they can fit in a palm. Tablets are classified in the same way as laptops, except they are divided by date in a similar manner to PDAs.
+
+Based on these observations, Figure \ref{fig:HeightvsWidth} shows the length
+against width of all mobile devices coloured by their estimated type.
+%Figure \ref{fig:HeightvsWidth} plots device width against device length.
+%Figure \ref{fig:DevicevsDisplay} plots the device aspect ratio against the display aspect ratio.
+%Each device is assigned a unique colour so the clusters in the data are easily visualised.
+%Insert the single visulisations with the colours - both for the width and height, and the aspect ratios
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{../Visualisations/A/length-width-ctype.png}
+    \caption{Length against width for all the mobile devices in the data,
+	coloured by their estimated type. Note that the axes do not have units
+	since they have been normalised.}
     \label{fig:HeightvsWidth}
 \end{figure}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.5\textwidth]{../Visualisations/A/DevicevsDisplayColour.png}
-    \caption{}
-    \label{fig:DevicevsDisplay}
-\end{figure}
-
-Figure \ref{fig:HeightvsWidth} plots device width against device height. Figure \ref{fig:DevicevsDisplay} plots the device aspect ratio against the display aspect ratio. Each device is assigned a unique colour so the clusters in the data are easily visualised. The axis values are normalised to be within the range of (0,1).
-%Insert the single visulisations with the colours - both for the width and height, and the aspect ratios
-%Explain what they mean
+%\begin{figure}
+%    \centering
+%    \includegraphics[width=0.5\textwidth]{../Visualisations/A/DevicevsDisplayColour.png}
+%    \caption{}
+%    \label{fig:DevicevsDisplay}
+%\end{figure}
 
 \subsection{Design Evaluation}
 %Explain how your interactive visualisation has been evaluated and what sort of changes/modifications were applied to derive your final interactive visualisation.
 
-Exploratory data analysis of comparing different aspects against each other was used to find these initial types.
-Once the types were discovered, colours were added, and the two visualisations that mostly clearly illustrated the characteristics that defined them were created. It was found that the best axis assignments to separate the mobile devices into their respective types was height vs width as well as device vs display aspect ratios. This makes sense as often times we define these device types by their sizes, an example being comparing a tablet to a smartphone, whereby the tablet is clearly larger in both dimensions. 
+%Exploratory data analysis of comparing different aspects against each other was used to find these initial types.
+%Once the types were discovered, colours were added, and the two visualisations that mostly clearly illustrated the characteristics that defined them were created. It was found that the best axis assignments to separate the mobile devices into their respective types was length vs width as well as device vs display aspect ratios. This makes sense as often times we define these device types by their sizes, an example being comparing a tablet to a smartphone, whereby the tablet is clearly larger in both dimensions.
+
+The interactive visualisations were evaluated on their utility, comprehension
+and insightfulness. These were judged respectively by how well the visualisation
+was to use, understand and make new insights from.
+
+One modification made as a result of such evaluation was the $r=1$ line in
+Figure \ref{fig:length-width-cyear-shot}, which was included after users
+found it difficult to locate the distinction between portrait and landscape
+devices. Similarly, colouring by release year added a temporal scale to the
+visualisation which helped users to identify different device types.
+
+Furthermore, interaction was a key component included in the evaluation of
+Figures \ref{fig:length-width-cyear-shot} and \ref{fig:ddiag-diag-ccpu-shot}.
+Through such a process, the hover capability was included wherein the user is
+able to hover over a point and reveal its model name. Selection of certain
+points was also added such as the ability to zoom in and out of a region.
+
+Finally, in Figure \ref{fig:HeightvsWidth}, the evaluation of different colour
+palettes was made -- until a defining scheme was reached which grouped similar
+types and contrasted the portrait and landscape classes.
 
 \subsection{Justifications}
 %Why certain axes arrangement(s) was(were) used and how they would help to see the information you would need to see,
 %Why certain visual variables were used and how they would help to see the information you would need to see,
 %Why certain interaction was used and how that would assist analytic processes.
 
-For the initial comparison of the height and width, choosing the height as the vertical axis, and the width as the horizontal axis made the most sense. This is because it accorded with people's intuitive understanding of height and width - allowing them to imagine each dot as defining the diagonal extension of the device.
+The orthogonal axes arrangement of length and width in Figures
+\ref{fig:length-width-cyear-shot} and \ref{fig:HeightvsWidth} was used because
+size and shape are clear indicators of different device types. Furthermore,
+length was placed on the $y$-axis and width on the $x$-axis since it aligns
+with a human's intuition of a mobile device's orientation -- allowing them to
+imagine each dot as defining the diagonal extension of the device.
 
-For the arrangement of the device vs display aspect ratios, the choice of which was horizontal and which was vertical was more arbitrary. The display aspect ratio was selected as the horizontal axis, since that dataset had a larger range. 
+Similarly, the orthogonal axes arrangement of display diagonal and device
+diagonal was used in Figure \ref{fig:ddiag-diag-ccpu-shot} in order to help
+users to compare portrait devices of different sizes and display sizes. The
+choice of which to place on the $x$- and $y$-axis was arbitrary. CPU clock
+speed was chosen as a visual variable to help distinguish powerful from less
+powerful devices. This choice became helpful in presenting the proportional
+relationship between display diagonal and CPU clock speed.
 
-For both, colours were used to illustrate the differences between devices. Colours were selected to be similar - reds for phones, blues for palm/laptops, green for PDAs, and purple for tablets. This assists in the data visualisation as it clusters each device type into separate groups where they can be visually distinguished.
+Colour-blind--friendly colour scales were chosen for Figures
+\ref{fig:length-width-cyear-shot} and \ref{fig:ddiag-diag-ccpu-shot} to
+accomodate for all users. These visual variables were chosen to assist in
+drawing insights from interaction with these visualisations. Furthermore,
+in Figure \ref{fig:HeightvsWidth}, colours were used to illustrate the
+differences and similarities between device types. A legend with labels for
+each colour is also included to help understand which colour belong to which
+type.
 
-On one or both of the visualisations, for each type, there is a clear cluster that illustrates the difference between the types. The only exception is the smartphone/PDA cluster, for reasons outlined above in Section \ref{sec:Avisu}.
-
-We decided to opt for using no interactivity with these visualisations, since they already clearly separate each mobile device into their corresponding categories.
+Interactivity was included in Figures \ref{fig:length-width-cyear-shot} and
+\ref{fig:ddiag-diag-ccpu-shot} through hover, zoom and select
+functionality. This was included to assist with defining the mobile device
+types and assists the analytic process by providing the user the ability to
+further explore the data at will.
 
 \section{Historical Trends}
 %What sorts of “trends” can you observe regarding some types of mobile devices becoming obsolete and being taken over by different/new types?
@@ -160,7 +256,7 @@ Finally, the phone and PDA market slowly grows, with dumbphones remaining popula
 %Show the time segment plots - width/height and aspect ratios
 
 %Show the combined market share plot
-Figure \ref{fig:DimensionsYear} is a time series plot for each devices width against its height. Figure \ref{fig:AspectRatioYear} plots each devices aspect ratio against its corresponding display aspect ratio. Each device is present in exactly one of the plots from the years 1994-2013. Once again, the devices are colour coded to assist in visual analysis.
+Figure \ref{fig:DimensionsYear} is a time series plot for each devices width against its length. Figure \ref{fig:AspectRatioYear} plots each devices aspect ratio against its corresponding display aspect ratio. Each device is present in exactly one of the plots from the years 1994-2013. Once again, the devices are colour coded to assist in visual analysis.
 
 Figure \ref{fig:MarketShareYear} however is slightly different. In this stackplot, each device is plotted by its percentage market share over the years. 
 \subsection{Design Evaluation}
