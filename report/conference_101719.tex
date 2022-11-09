@@ -33,11 +33,11 @@
 \maketitle
 
 \begin{abstract}
-Over the past few decades, many different kinds of mobile devices have emerged. Some new mobile devices have succeeded in capturing the market, but some have failed. The best-selling type of mobile device has also varied over time, and not always has one device been dominant in the market. In this assignment, we used multiple visualizations to explore what the mobile devices market look like and how it has changed over the last few decades.
+Over the past few decades, many different kinds of mobile devices have emerged. Some new mobile devices have succeeded in capturing the market, but some have failed. The best-selling type of mobile device has also varied over time, and not always has one device been dominant in the market. In this assignment, we used multiple interactive visualisations to explore what the mobile devices market looks like and how it has changed between 1989 and 2013.
 \end{abstract}
 
 \begin{IEEEkeywords}
-mobile devices, visualizations
+mobile devices, visualisations
 \end{IEEEkeywords}
 
 \section{Mobile Device Types}
@@ -354,37 +354,42 @@ The two plots were stacked together with their time axes aligned -- allowing for
 
 \section{Future Predictions}
 %If you were to predict or anticipate a newly emerging mobile device type, what sort of evidence(s) you can visually show to easily detect such emergence? For instance, if you only had access to the data between 1989 and 2010, how would you anticipate new types which became dominant during 2011 and 2013 without seeing the data corresponding to 2011 – 2013?
-Question C asks us to find evidence that could predict or anticipate an emerging category of mobile devices. Two methods were used by us to answer this question, one was to predict possible future emerging mobile device categories by directly observing the market share graphs for each type of mobile device. The other was to identify additional metrics to predict possible emerging mobile device categories in the future by observing changes in the metrics. Here we are going to describe how we use these two methods to make predictions by giving examples.
+The final question asks us to find evidence that could predict or anticipate an emerging category of mobile devices.
+Two methods were used to answer this question. One was to predict possible future emerging mobile device categories by directly observing the market share graph with each type of mobile device. The other was to identify additional metrics to predict possible emerging mobile device categories by observing changes in these metrics.
 
-For example, assuming we only have data from 1989 to 2010, Our goal is to predict the new type of mobile devices that became dominant from 2011 to 2013. We tried to use the first method at first. As we can see from Figure \ref{fig:market-2010}, smartphones started to appear in 2007 and have grown rapidly in market share every year since then. Tablets started to appear in 2009, but only occupy a small market share. PDAs, on the other hand, have seen a steady decline in market share. It is therefore reasonable to assume that after 2010, smartphones will continue to grow steadily and replace PDAs as the dominant type of mobile device.
+In particular, assuming we only have data from 1989 to 2010, our goal is to predict the new type of mobile devices that became dominant from 2011 to 2013.
+We begin by discussing the market share plot.
+As we can see from Figure \ref{fig:market-2010}, smartphones started to appear in 2007 and have grown rapidly in market share every year since then. Tablets started to appear in 2009, but only occupy a small market share. PDAs, on the other hand, have seen a steady decline in market share. It is therefore reasonable to assume that after 2010, smartphones will continue to grow steadily and replace PDAs as the dominant type of mobile device.
 
-Now we try to use the second method at this time. We use one metric to make predictions. Let the metric $m$ given by
+Now we move on to the second method. Consider the metric $m$ given by
 \[ m = \frac{\text{pixel density}}{\text{depth}}. \]
 
 The reason for choosing this metric is that smartphones generally have a higher pixel density than other categories of mobile devices, while their depth is generally less than other categories of mobile devices. Therefore, the metric is able to differentiate smartphones from other categories of mobile devices.
 
-By looking at the line graph in Figure \ref{fig:pixel}, it can be seen that from 2008-2010, the average pixel density/depth is increasing linearly, which means that the pixels of mobile devices are increasing and their thickness is decreasing during the decade, thus we can deduce that the reason for this result is the mass production of cell phones, especially in 2006-2010, when the slope is increasing significantly and gradually. Thus, we can predict that the proportion of cell phones in the market share will increase significantly in the next 3 years. Comparing the market share graphs, we can see that cell phones did dominate the market share from 2008 to 2013, thus confirming our prediction.
+By looking at the line graph in Figure \ref{fig:pixel}, it can be seen that from 2008--2010, the average pixel density/depth is increasing linearly, which means that the pixels of mobile devices are increasing and their thickness is decreasing during the decade, thus we can deduce that the reason for this result is the mass production of cell phones, especially in 2006-2010, when the slope is gradually increasing. Thus, we can predict that the proportion of cell phones in the market share will increase significantly in the next 3 years. Comparing the market share graphs, we can see that cell phones did dominate the market share from 2008 to 2013, thus confirming our prediction.
 
 \begin{figure}
     \centering
     \includegraphics[width=0.5\textwidth]{../Visualisations/C/Market share 2010.png}
-    \caption{}
+    \caption{An interactive visualisation of the percentage market share of each
+	mobile device type from 1999 to 2010, coloured by type.}
     \label{fig:market-2010}
 \end{figure}
 
 \begin{figure}
     \centering
     \includegraphics[width=0.5\textwidth]{../Visualisations/C/Piexel density.png}
-    \caption{}
+    \caption{An interactive visualisation of the market share percentage
+	area plot (top) and the average $m$ metric (bottom) over time.}
     \label{fig:pixel}
 \end{figure}
 
 %Interactive Visualization (or multiple visualizations) allows you to “see” the pieces of information that lead to the answers to the above three questions 1-A/B/C.
 
 \subsection{Visualisation}
-Figure \ref{fig:market-2010} is an area chart that each device plotted by its percentage market share over the years until 2010, which is the time interval we can currently observe. Each device has been assigned a unique color. From the color area, it can be seen that it is the market share of mobile devices in different years. Thus, the share of mobile devices in different categories for each year and how the share of different mobile devices has changed over time can be easily visualized.
+Figure \ref{fig:market-2010} is an area chart with each device plotted by its percentage market share over the years from 1999 until 2010, which is the time interval we can currently observe. Each device has been assigned a unique color. From the color area, it can be seen that it is the market share of mobile devices in different years. Thus, the share of mobile devices in different categories for each year and how the share of different mobile devices has changed over time can be easily visualized.
 
-Figure \ref{fig:pixel} is a composite plot consisting of two subplots. One is an area chart of the market share of different types of mobile devices across years just like Figure \ref{fig:market-2010}, the other one is a line graph that shows a linear trend of the average pixel density/ width ratio of devices versus the year of mobile device release. The line graph could show the relationship more clearly, enhance the visualization, and help us to make further predictions.
+Figure \ref{fig:pixel} is a composite plot consisting of two subplots. One is an area chart of the market share of different types of mobile devices across years just like Figure \ref{fig:market-2010}, the other one is a line graph that shows a linear trend of the average pixel density/ width ratio of devices versus the year of mobile device release. The line graph shows this relationship more clearly, enhances the visualisation, and aids the user to make further predictions.
 
 \subsection{Design Evaluation}
 %Explain how your interactive visualisation has been evaluated and what sort of changes/modifications were applied to derive your final interactive visualisation.
@@ -398,7 +403,7 @@ For Figure \ref{fig:pixel}, the market share plot was used to show the actual ma
 %Why certain interaction was used and how that would assist analytic processes.
 Figure \ref{fig:market-2010} shows a chart of the proportional market share of the different categories of mobile devices. This visual chart arranges the proportion of market share vertically and the year of release horizontally, as the horizontal axis is supposed to be assigned to an evolving axis. And as before, we used an area plot rather than a line plot. This is because the area plot is filled and it could show a proportion of the market share of mobile devices in different categories and how they are changing more clearly. 
 
-For Figure \ref{fig:pixel}, the market share plot is arranged vertically in proportion to the market share and horizontally in the year of release of the mobile device. This is because the horizontal axis should be assigned to the axis that evolves over time. And we also chose an area chart here. To ensure visual coherence and ease of understanding, the colors match those of the previously drawn graphs. The Line graph is used to show the change of data over a continuous time interval or time span and is characterized by reflecting the trend of things changing over time or in ordered categories. The line graph clearly shows whether the data is increasing or decreasing, the rate of increase or decrease, the pattern of increase or decrease, and the peak characteristics. We use it to analyze the trend of data change over time, we use the horizontal axis in the line graph to represent the time span and the same time interval, and the vertical axis to represent the data values at different time moments.
+For Figure \ref{fig:pixel}, the market share plot is arranged vertically in proportion to the market share and horizontally in the year of release of the mobile device. This is because the horizontal axis should be assigned to the axis that evolves over time. And we also chose an area chart here. To ensure visual coherence and ease of understanding, the colors match those of the previously drawn graphs. The line graph is used to show the change of data over a continuous time interval or time span and is characterized by reflecting the trend of things changing over time or in ordered categories. The line graph clearly shows whether the data is increasing or decreasing, the rate of increase or decrease, the pattern of increase or decrease, and the peak characteristics. We use it to analyze the trend of data change over time, we use the horizontal axis in the line graph to represent the time span and the same time interval, and the vertical axis to represent the data values at different time moments.
 
 \bibliography{bib}
 \bibliographystyle{unsrt}
